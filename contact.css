@@ -1,0 +1,241 @@
+/* Navigation Bar */
+.navbar {
+  background-color: #f9f4e8;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  width: 1480px;
+}
+
+.nav-logo img {
+  height: 95px;
+  width: auto;
+  margin-left: 40px;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.nav-toggle .hamburger {
+  display: block;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  font-family: 'Prompt', sans-serif;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  margin-right: 80px;
+}
+.nav-links li a {
+  text-decoration:none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #f9f4e8;
+    flex-direction: column;
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding: 10px 0;
+  }
+  .nav-links.open {
+    transform: translateX(0);
+  }
+  .nav-links li {
+    margin: 10px 0;
+    text-align: right;
+    padding-right: 20px;
+  }
+}
+
+/* Base Setup */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f4e8;
+  font-family: 'Prompt', sans-serif;
+}
+
+.contact-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Heading */
+.contact-heading {
+  color: #042347;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 60px;
+}
+
+.contact-subtext {
+  font-family: 'Prompt', sans-serif;
+  color: #042347;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Main Layout */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+/* Images */
+.contact-img-left,
+.contact-img-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-img-right {
+  transform: translateY(-40px); /* Push image slightly down */
+}
+
+.contact-img-left img {
+  margin-bottom: 0;
+  transform: translateY(-60px); 
+}
+
+.contact-img-left img,
+.contact-img-right img {
+  width: 220px;
+  height: 430px;
+  margin: 0 25px;
+}
+
+.contact-img-left hr{
+  width: 140%;
+  border: 0.5px solid black;
+  margin-top: -60px;
+  margin-bottom: 90px;
+}
+
+.contact-img-right hr {
+  width: 150%;
+  border: 0.5px solid black;
+  margin-top: -1px;
+  align-self: flex-end;
+  margin-left: -34px;
+}
+
+/* Contact Box */
+.contact-box {
+  background-color: #00715b;
+  color: white;
+  padding: 2rem;
+  border-radius: 25px;
+  max-width: 350px;
+  width: 100%;
+  text-align: left;
+  font-family: 'Prompt', sans-serif;
+  height: 420px;
+}
+
+.contact-box h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.contact-box hr {
+  border: 0.5px solid #b0d9cd; 
+  margin: 1.1rem 0 1rem 0;
+}
+
+.contact-box h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.contact-box p {
+  margin: 0.2rem 0 0.8rem;
+  font-size: 1.12rem;
+}
+
+.contact-details > div {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* Button */
+.send-btn {
+  background-color: #f7d571;
+  color: #042347;
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.06rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 2rem auto 0 auto; /* Increased top margin and centered */
+  display: block;
+}
+
+.contact-details span {
+  font-size: 30px;     /* Increase this number to make the emoji bigger */
+  margin-top: 4px;     /* Optional: aligns emoji better vertically */
+}
+
+.send-btn:hover {
+  background-color: #f0c550;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-img-left img,
+  .contact-img-right img {
+    width: 120px;
+  }
+
+  .contact-box {
+    max-width: 90%;
+  }
+}

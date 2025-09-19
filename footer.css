@@ -1,0 +1,225 @@
+/* General Page Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Prompt', sans-serif;
+  background-color: #f9f4e8;
+  color: #042347;
+}
+
+/* Footer Container */
+.footer-section {
+  background-color: #f7d571;
+  padding: 10px 20px 160px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* Logo Section */
+.footer-logo-section {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  max-width: 180px;
+  height: 200px;
+  margin-left: -260px;
+  margin-top: 10px;
+}
+
+/* Quick Links Section */
+.footer-links-section {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: -100px;
+}
+
+.footer-heading {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link-home,
+.footer-link-about,
+.footer-link-involved {
+  color: #042347;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  margin: 8px 0;
+}
+
+/* Contact Section */
+.footer-contact-section {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-contact {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.footer-contact-section p {
+  margin: 10px 0; /* Reduce vertical spacing between lines */
+}
+
+.footer-heading-contact {
+  margin-bottom: 28px; /* Reduce space below heading */
+}
+
+/* Individual Font Sizes */
+.footer-heading-links {
+  font-size: 30px;
+}
+
+.footer-link-home {
+  font-size: 20px;
+}
+
+.footer-link-about {
+  font-size: 20px;
+}
+
+.footer-link-involved {
+  font-size: 20px;
+}
+
+.footer-heading-contact {
+  font-size: 30px;
+}
+
+.footer-email {
+  font-size: 19px;
+}
+
+.footer-phone {
+  font-size: 19px;
+}
+
+/* Newsletter Section */
+.footer-newsletter-section {
+  background-color: #fff5cc;
+  border: 3px solid #f7d571;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  /* Increase width */
+  max-width: 320px; /* Increase this as needed */
+  min-width: 250px;
+  font-family: 'Prompt', sans-serif;
+  color: #042347;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-right: -20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  flex: 1.2; /* This makes it grow slightly more than the other sections */
+}
+
+
+.newsletter-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: 'Prompt', sans-serif;
+  color: #042347;
+}
+
+.newsletter-input {
+  display: block;             /* Make it block-level */
+  margin: 0 auto;             /* Center horizontally */
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #fff0e1;
+  color: #042347;
+  font-family: 'Prompt', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  width: 80%;                 /* Control width so it doesn't touch edges */
+}
+
+
+/* Bottom Images */
+.footer-bottom-images {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  left: -14px;
+  display: flex;
+  justify-content: space-between;
+  /*align-items: flex-end;*/
+  padding: 0 20px;
+}
+
+.footer-img-left,
+.footer-img-right {
+  max-width: 500px;
+  height: 200px;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo-section,
+  .footer-links-section,
+  .footer-contact-section {
+    text-align: center;
+  }
+
+  .footer-bottom-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    padding-top: 30px;
+  }
+
+  .footer-img-left,
+  .footer-img-right {
+    max-width: 100%;
+    width: 80%;
+  }
+
+  .footer-logo{
+    margin-left: -100px;
+  }
+
+   .footer-newsletter-section {
+    max-width: 100%;
+    width: 80%;
+  }
+
+  .newsletter-input {
+    font-size: 16px;
+  }
+}
